@@ -29,16 +29,24 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
             comboBox2 = new ComboBox();
-            label3 = new Label();
-            label2 = new Label();
-            comboBox1 = new ComboBox();
             dataGridView2 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
-            textBox1 = new TextBox();
-            label1 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            comboBox1 = new ComboBox();
+            tabPage2 = new TabPage();
+            dataGridView1 = new DataGridView();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
+            Column7 = new DataGridViewButtonColumn();
             groupBox3 = new GroupBox();
             textBox5 = new TextBox();
             textBox4 = new TextBox();
@@ -50,6 +58,9 @@
             label4 = new Label();
             groupBox2 = new GroupBox();
             groupBox4 = new GroupBox();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
             radioButton3 = new RadioButton();
             radioButton2 = new RadioButton();
             radioButton1 = new RadioButton();
@@ -60,26 +71,15 @@
             label9 = new Label();
             textBox6 = new TextBox();
             label8 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            tabControl1 = new TabControl();
-            tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
-            dataGridView1 = new DataGridView();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewButtonColumn();
             groupBox1.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox4.SuspendLayout();
-            tabControl1.SuspendLayout();
-            tabPage1.SuspendLayout();
-            tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
@@ -94,6 +94,47 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Busqueda de consultas";
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(111, 29);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(158, 23);
+            textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(6, 37);
+            label1.Name = "label1";
+            label1.Size = new Size(90, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Buscar paciente";
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(6, 103);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(525, 367);
+            tabControl1.TabIndex = 7;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(comboBox2);
+            tabPage1.Controls.Add(dataGridView2);
+            tabPage1.Controls.Add(label3);
+            tabPage1.Controls.Add(label2);
+            tabPage1.Controls.Add(comboBox1);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(517, 339);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Pendientes";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
@@ -101,32 +142,6 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 6;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(265, 19);
-            label3.Name = "label3";
-            label3.Size = new Size(101, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Filtrar por médico";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(9, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(96, 15);
-            label2.TabIndex = 4;
-            label2.Text = "Filtrar por estado";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(123, 16);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 3;
             // 
             // dataGridView2
             // 
@@ -155,21 +170,75 @@
             Column3.Name = "Column3";
             Column3.Width = 150;
             // 
-            // textBox1
+            // label3
             // 
-            textBox1.Location = new Point(111, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(158, 23);
-            textBox1.TabIndex = 1;
+            label3.AutoSize = true;
+            label3.Location = new Point(265, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(101, 15);
+            label3.TabIndex = 5;
+            label3.Text = "Filtrar por médico";
             // 
-            // label1
+            // label2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(6, 37);
-            label1.Name = "label1";
-            label1.Size = new Size(90, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Buscar paciente";
+            label2.AutoSize = true;
+            label2.Location = new Point(9, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(96, 15);
+            label2.TabIndex = 4;
+            label2.Text = "Filtrar por estado";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(123, 16);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 3;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(dataGridView1);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(517, 339);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Historial";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column4, Column5, Column6, Column7 });
+            dataGridView1.Location = new Point(6, 21);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(494, 296);
+            dataGridView1.TabIndex = 0;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Fechad de consulta";
+            Column4.Name = "Column4";
+            Column4.Width = 135;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Médico";
+            Column5.Name = "Column5";
+            Column5.Width = 140;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Estado";
+            Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            Column7.FillWeight = 140F;
+            Column7.HeaderText = "Anular pago";
+            Column7.Name = "Column7";
+            Column7.Width = 70;
             // 
             // groupBox3
             // 
@@ -289,6 +358,33 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Detalles de facturación";
             // 
+            // button3
+            // 
+            button3.Location = new Point(412, 236);
+            button3.Name = "button3";
+            button3.Size = new Size(75, 49);
+            button3.TabIndex = 12;
+            button3.Text = "Cancelar";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(213, 236);
+            button2.Name = "button2";
+            button2.Size = new Size(144, 49);
+            button2.TabIndex = 11;
+            button2.Text = "Reimprimir recibo";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(27, 236);
+            button1.Name = "button1";
+            button1.Size = new Size(138, 49);
+            button1.TabIndex = 10;
+            button1.Text = "Confirmar pago";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // radioButton3
             // 
             radioButton3.AutoSize = true;
@@ -384,102 +480,6 @@
             label8.TabIndex = 0;
             label8.Text = "Valor de la consulta";
             // 
-            // button1
-            // 
-            button1.Location = new Point(27, 236);
-            button1.Name = "button1";
-            button1.Size = new Size(138, 49);
-            button1.TabIndex = 10;
-            button1.Text = "Confirmar pago";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(213, 236);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 49);
-            button2.TabIndex = 11;
-            button2.Text = "Reimprimir recibo";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(412, 236);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 49);
-            button3.TabIndex = 12;
-            button3.Text = "Cancelar";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            tabControl1.Controls.Add(tabPage1);
-            tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(6, 103);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(525, 367);
-            tabControl1.TabIndex = 7;
-            // 
-            // tabPage1
-            // 
-            tabPage1.Controls.Add(comboBox2);
-            tabPage1.Controls.Add(dataGridView2);
-            tabPage1.Controls.Add(label3);
-            tabPage1.Controls.Add(label2);
-            tabPage1.Controls.Add(comboBox1);
-            tabPage1.Location = new Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(517, 339);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Pendientes";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(dataGridView1);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(517, 339);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Historial";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column4, Column5, Column6, Column7 });
-            dataGridView1.Location = new Point(6, 21);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(494, 296);
-            dataGridView1.TabIndex = 0;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Fechad de consulta";
-            Column4.Name = "Column4";
-            Column4.Width = 135;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Médico";
-            Column5.Name = "Column5";
-            Column5.Width = 140;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Estado";
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.FillWeight = 140F;
-            Column7.HeaderText = "Anular pago";
-            Column7.Name = "Column7";
-            Column7.Width = 70;
-            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -488,21 +488,21 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Name = "Form4";
-            Text = "Form4";
+            Text = "Cajero";
             Load += Form4_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
-            tabControl1.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
-            tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
